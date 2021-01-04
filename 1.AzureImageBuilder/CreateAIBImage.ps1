@@ -2,11 +2,12 @@
 
 #Set Variables - Resource Group to deploy into and the ARM template we use later
 $RG = "WVD_WEU_AzureImageBuilder"
-$TemplateUri = "https://raw.githubusercontent.com/swenevers/WVD-Images/master/1.AzureImageBuilder/DeployAnImage.json"
+#$TemplateUri = "https://raw.githubusercontent.com/swenevers/WVD-Images/tree/main/1.AzureImageBuilder/DeployAnImage.json"
+$TemplateUri = "https://raw.githubusercontent.com/swenevers/WVD-Images/1.AzureImageBuilder/DeployAnImage.json"
 
 #Install AZ if not already installed and login
 # Install-Module Az -Force
-# Connect-AzAccount
+ Connect-AzAccount
 
 # Regsiter the feature whilst its in preview
 Register-AzProviderFeature -ProviderNamespace Microsoft.VirtualMachineImages -FeatureName VirtualMachineTemplatePreview
